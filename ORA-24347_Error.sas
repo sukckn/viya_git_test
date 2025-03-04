@@ -11,7 +11,7 @@ dcl double RESPONSE_DTTM;
 
 		sqlStmt= 'SELECT rh.response_dttm AS RESPONSE_DTTM 
                     FROM ci360_v_contact_history_da vch 
-                  left join ci360_t_response_history rh on vch.contact_id = rh.contact_id';
+                  LEFT join ci360_t_response_history rh on vch.contact_id = rh.contact_id';
 
 		sqlQuery= _new_ sqlstmt(sqlStmt, CONN);
 		sqlQuery.execute();  
