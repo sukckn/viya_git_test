@@ -9,7 +9,7 @@ dcl double RESPONSE_DTTM;
 		
 		conn= 'driver=sql;conopts=(DRIVER=ORACLE;CATALOG=sas_core;USER=SAS_CORE;PASSWORD=BRXyMswXBCQJ9bmAGt9Q;PATH=gsz-oracle.emea.sas.com:1521;SCHEMA=SAS_CORE)';
 
-		sqlStmt= 'select rh.response_dttm AS RESPONSE_DTTM 
+		sqlStmt= 'SELECT rh.response_dttm AS RESPONSE_DTTM 
                     from ci360_v_contact_history_da vch 
                   left join ci360_t_response_history rh on vch.contact_id = rh.contact_id';
 
